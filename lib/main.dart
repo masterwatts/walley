@@ -17,7 +17,7 @@ void main() async {
 class Walley extends StatelessWidget {
   const Walley({super.key});
 
-  static const String version = "0.1a";
+  static const String version = "0.2";
   static const bool beta = true;
 
   @override

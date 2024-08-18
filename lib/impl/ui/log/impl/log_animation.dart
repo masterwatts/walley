@@ -1,7 +1,7 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:msh_checkbox/msh_checkbox.dart';
-import 'package:walley/util/sound_util.dart';
 import 'package:walley/util/user_util.dart';
 
 class LogAnimation extends StatefulWidget {
@@ -20,6 +20,7 @@ class LogAnimation extends StatefulWidget {
 
 class _LogAnimationState extends State<LogAnimation>
     with TickerProviderStateMixin {
+  final AudioPlayer player = AudioPlayer();
   late final AnimationController _tickOpacityAnimationController,
       _opacityBackgroundAnimationController,
       _visualsSlideInAnimationController;
@@ -27,8 +28,12 @@ class _LogAnimationState extends State<LogAnimation>
       _opacityBackgroundAnimation,
       _visualsSlideInAnimation;
 
+  bool playedSuccessSound = false, alreadyPopped = false;
+
   @override
   void initState() {
+    playedSuccessSound = false;
+    alreadyPopped = false;
     _tickOpacityAnimationController = AnimationController(
       duration: const Duration(milliseconds: 150),
       vsync: this,
@@ -63,6 +68,17 @@ class _LogAnimationState extends State<LogAnimation>
 
   @override
   Widget build(BuildContext context) {
+    pop() {
+      if (!alreadyPopped) {
+        _visualsSlideInAnimationController.duration =
+            const Duration(milliseconds: 150);
+        _visualsSlideInAnimationController.reverse();
+        _opacityBackgroundAnimationController.reverse();
+        alreadyPopped = true;
+        Navigator.pop(context);
+      }
+    }
+
     return FutureBuilder(
       future: UserUtil.modifyJsonDocument(
         "spendingHistory",
@@ -83,7 +99,9 @@ class _LogAnimationState extends State<LogAnimation>
         builder: (_, balanceModification) {
           bool isConnectionPending =
               (newEntry.connectionState != ConnectionState.done ||
-                  balanceModification.connectionState != ConnectionState.done);
+                  newEntry.error != null ||
+                  balanceModification.connectionState != ConnectionState.done ||
+                  balanceModification.error != null);
 
           return AnimatedBuilder(
             animation: _opacityBackgroundAnimationController,
@@ -98,13 +116,7 @@ class _LogAnimationState extends State<LogAnimation>
                   alignment: Alignment.bottomCenter,
                   children: [
                     GestureDetector(
-                      onTap: () {
-                        _visualsSlideInAnimationController.duration =
-                            const Duration(milliseconds: 250);
-                        _visualsSlideInAnimationController.reverse();
-                        _opacityBackgroundAnimationController.reverse();
-                        Navigator.pop(context);
-                      },
+                      onTap: () => pop(),
                     ),
                     AnimatedBuilder(
                       animation: _visualsSlideInAnimationController,
@@ -148,15 +160,21 @@ class _LogAnimationState extends State<LogAnimation>
                                   context,
                                   child,
                                 ) {
-                                  if (!isConnectionPending) {
+                                  if (!isConnectionPending &&
+                                      !playedSuccessSound) {
                                     // animation done
+                                    playedSuccessSound = true;
                                     _tickOpacityAnimationController.forward();
+                                    HapticFeedback.lightImpact();
+                                    player.play(
+                                      AssetSource(
+                                        "sounds/transaction_success.m4a",
+                                      ),
+                                    );
+
                                     Future.delayed(
-                                      const Duration(milliseconds: 250),
-                                    ).then((_) {
-                                      SoundUtil.playTransactionComplete();
-                                      HapticFeedback.mediumImpact();
-                                    });
+                                      const Duration(milliseconds: 1200),
+                                    ).then((_) => pop());
                                   }
                                   return Stack(
                                     alignment: Alignment.center,
@@ -176,13 +194,11 @@ class _LogAnimationState extends State<LogAnimation>
                                         ),
                                       ),
                                       Opacity(
-                                        opacity: _tickOpacityAnimationController
-                                            .value,
+                                        opacity: _tickOpacityAnimation.value,
                                         child: MSHCheckbox(
                                           size: 60,
-                                          value: _tickOpacityAnimationController
-                                                  .value ==
-                                              1,
+                                          value:
+                                              _tickOpacityAnimation.value == 1,
                                           colorConfig: MSHColorConfig
                                               .fromCheckedUncheckedDisabled(
                                             checkedColor: Theme.of(context)
@@ -217,6 +233,7 @@ class _LogAnimationState extends State<LogAnimation>
     _tickOpacityAnimationController.dispose();
     _opacityBackgroundAnimationController.dispose();
     _visualsSlideInAnimationController.dispose();
+    player.dispose();
     super.dispose();
   }
 }
