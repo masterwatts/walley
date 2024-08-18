@@ -68,17 +68,6 @@ class _LogAnimationState extends State<LogAnimation>
 
   @override
   Widget build(BuildContext context) {
-    pop() {
-      if (!alreadyPopped) {
-        _visualsSlideInAnimationController.duration =
-            const Duration(milliseconds: 150);
-        _visualsSlideInAnimationController.reverse();
-        _opacityBackgroundAnimationController.reverse();
-        alreadyPopped = true;
-        Navigator.pop(context);
-      }
-    }
-
     return FutureBuilder(
       future: UserUtil.modifyJsonDocument(
         "spendingHistory",
@@ -102,6 +91,17 @@ class _LogAnimationState extends State<LogAnimation>
                   newEntry.error != null ||
                   balanceModification.connectionState != ConnectionState.done ||
                   balanceModification.error != null);
+
+          pop() {
+            if (!alreadyPopped && !isConnectionPending) {
+              _visualsSlideInAnimationController.duration =
+                  const Duration(milliseconds: 250);
+              _visualsSlideInAnimationController.reverse();
+              _opacityBackgroundAnimationController.reverse();
+              alreadyPopped = true;
+              Navigator.pop(context);
+            }
+          }
 
           return AnimatedBuilder(
             animation: _opacityBackgroundAnimationController,
@@ -186,10 +186,9 @@ class _LogAnimationState extends State<LogAnimation>
                                         child: Opacity(
                                           opacity:
                                               1 - _tickOpacityAnimation.value,
-                                          child:
-                                              const CircularProgressIndicator(
+                                          child: CircularProgressIndicator(
                                             strokeWidth: 4,
-                                            color: Colors.white,
+                                            color: const Color(0xFFCCCCCC),
                                           ),
                                         ),
                                       ),
