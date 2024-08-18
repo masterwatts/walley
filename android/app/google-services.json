@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1049396010877",
+    "project_id": "walley-c0a5b",
+    "storage_bucket": "walley-c0a5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049396010877:android:33b34aec67781d0303f614",
+        "android_client_info": {
+          "package_name": "net.sonnct.walley"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCT8lAj2btkUQSb1e9VMyTkL6lPSFb_rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
