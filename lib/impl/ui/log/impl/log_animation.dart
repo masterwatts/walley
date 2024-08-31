@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -42,7 +44,7 @@ class _LogAnimationState extends State<LogAnimation>
         Tween(begin: .0, end: 1.0).animate(_tickOpacityAnimationController);
 
     _opacityBackgroundAnimationController = AnimationController(
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 300),
       vsync: this,
     );
     _opacityBackgroundAnimation = Tween(begin: 0.0, end: 0.5)
@@ -69,23 +71,21 @@ class _LogAnimationState extends State<LogAnimation>
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: UserUtil.modifyJsonDocument(
-        "spendingHistory",
-        (Map<String, dynamic> currentData) {
-          currentData[DateTime.now().toString()] = {
-            "type": "expend",
-            "amount": widget.moneyAmount.toString(),
-            "category": widget.category,
-            "notes": widget.notes,
-          };
-          return currentData;
-        },
-      ),
-      builder: (_, newEntry) => FutureBuilder(
-        future: UserUtil.modifyBalance(
-          -widget.moneyAmount!,
+      future: UserUtil.modifyBalance(widget.moneyAmount!),
+      builder: (_, balanceModification) => FutureBuilder(
+        future: UserUtil.modifyJsonDocument(
+          "spendingHistory",
+          (Map<String, dynamic> currentData) {
+            currentData[DateTime.now().toString()] = {
+              "type": "expend",
+              "amount": widget.moneyAmount.toString(),
+              "category": widget.category,
+              "notes": widget.notes,
+            };
+            return currentData;
+          },
         ),
-        builder: (_, balanceModification) {
+        builder: (_, newEntry) {
           bool isConnectionPending =
               (newEntry.connectionState != ConnectionState.done ||
                   newEntry.error != null ||
@@ -165,7 +165,7 @@ class _LogAnimationState extends State<LogAnimation>
                                     // animation done
                                     playedSuccessSound = true;
                                     _tickOpacityAnimationController.forward();
-                                    HapticFeedback.lightImpact();
+                                    HapticFeedback.mediumImpact();
                                     player.play(
                                       AssetSource(
                                         "sounds/transaction_success.m4a",
@@ -186,9 +186,10 @@ class _LogAnimationState extends State<LogAnimation>
                                         child: Opacity(
                                           opacity:
                                               1 - _tickOpacityAnimation.value,
-                                          child: CircularProgressIndicator(
+                                          child:
+                                              const CircularProgressIndicator(
                                             strokeWidth: 4,
-                                            color: const Color(0xFFCCCCCC),
+                                            color: Color(0xFFCCCCCC),
                                           ),
                                         ),
                                       ),

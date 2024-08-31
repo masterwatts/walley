@@ -1,0 +1,178 @@
+Date : 2024-08-27 09:33:18
+Directory : /Volumes/Productivity/Programming/Flutter/walley
+Total : 82 files,  4752 codes, 404 comments, 473 blanks, all 5629 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Dart       |         30 |      3,174 |        111 |        194 |      3,479 |
+| C++        |         16 |        562 |        127 |        188 |        877 |
+| XML        |         14 |        474 |         53 |         12 |        539 |
+| JSON       |          6 |        278 |          0 |          4 |        282 |
+| Groovy     |          3 |         83 |         10 |         17 |        110 |
+| YAML       |          2 |         79 |         81 |         22 |        182 |
+| Swift      |          6 |         62 |          7 |         20 |         89 |
+| HTML       |          1 |         19 |         15 |          5 |         39 |
+| Markdown   |          2 |         13 |          0 |          9 |         22 |
+| Properties |          2 |          8 |          0 |          2 |         10 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                           | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                              |         82 |      4,752 |        404 |        473 |      5,629 |
+| . (Files)                                                                                                      |          4 |         90 |         81 |         29 |        200 |
+| android                                                                                                        |         13 |        186 |         61 |         28 |        275 |
+| android (Files)                                                                                                |          3 |         41 |          2 |          9 |         52 |
+| android/app                                                                                                    |          9 |        140 |         59 |         18 |        217 |
+| android/app (Files)                                                                                            |          2 |         74 |          8 |          9 |         91 |
+| android/app/src                                                                                                |          7 |         66 |         51 |          9 |        126 |
+| android/app/src/debug                                                                                          |          1 |          3 |          4 |          1 |          8 |
+| android/app/src/main                                                                                           |          5 |         60 |         43 |          7 |        110 |
+| android/app/src/main (Files)                                                                                   |          1 |         34 |         11 |          1 |         46 |
+| android/app/src/main/res                                                                                       |          4 |         26 |         32 |          6 |         64 |
+| android/app/src/main/res/drawable                                                                              |          1 |          4 |          7 |          2 |         13 |
+| android/app/src/main/res/drawable-v21                                                                          |          1 |          4 |          7 |          2 |         13 |
+| android/app/src/main/res/values                                                                                |          1 |          9 |          9 |          1 |         19 |
+| android/app/src/main/res/values-night                                                                          |          1 |          9 |          9 |          1 |         19 |
+| android/app/src/profile                                                                                        |          1 |          3 |          4 |          1 |          8 |
+| android/gradle                                                                                                 |          1 |          5 |          0 |          1 |          6 |
+| android/gradle/wrapper                                                                                         |          1 |          5 |          0 |          1 |          6 |
+| assets                                                                                                         |          4 |          4 |          0 |          0 |          4 |
+| ios                                                                                                            |          8 |        229 |          4 |         13 |        246 |
+| ios/Runner                                                                                                     |          7 |        222 |          2 |          9 |        233 |
+| ios/Runner (Files)                                                                                             |          2 |         13 |          0 |          3 |         16 |
+| ios/Runner/Assets.xcassets                                                                                     |          3 |        148 |          0 |          4 |        152 |
+| ios/Runner/Assets.xcassets/AppIcon.appiconset                                                                  |          1 |        122 |          0 |          1 |        123 |
+| ios/Runner/Assets.xcassets/LaunchImage.imageset                                                                |          2 |         26 |          0 |          3 |         29 |
+| ios/Runner/Base.lproj                                                                                          |          2 |         61 |          2 |          2 |         65 |
+| ios/RunnerTests                                                                                                |          1 |          7 |          2 |          4 |         13 |
+| lib                                                                                                            |         30 |      3,174 |        111 |        194 |      3,479 |
+| lib (Files)                                                                                                    |          4 |        128 |         12 |         18 |        158 |
+| lib/impl                                                                                                       |         20 |      2,844 |         60 |        138 |      3,042 |
+| lib/impl/auth                                                                                                  |          2 |        522 |          2 |         24 |        548 |
+| lib/impl/finance                                                                                               |          2 |         64 |          0 |          6 |         70 |
+| lib/impl/ui                                                                                                    |         16 |      2,258 |         58 |        108 |      2,424 |
+| lib/impl/ui (Files)                                                                                            |          1 |          3 |          0 |          1 |          4 |
+| lib/impl/ui/home                                                                                               |          2 |        382 |         42 |         12 |        436 |
+| lib/impl/ui/home (Files)                                                                                       |          1 |        262 |         41 |          5 |        308 |
+| lib/impl/ui/home/impl                                                                                          |          1 |        120 |          1 |          7 |        128 |
+| lib/impl/ui/lessons                                                                                            |          6 |        704 |          0 |         33 |        737 |
+| lib/impl/ui/lessons (Files)                                                                                    |          1 |        109 |          0 |          7 |        116 |
+| lib/impl/ui/lessons/impl                                                                                       |          5 |        595 |          0 |         26 |        621 |
+| lib/impl/ui/lessons/impl (Files)                                                                               |          1 |          6 |          0 |          1 |          7 |
+| lib/impl/ui/lessons/impl/lessons                                                                               |          2 |        382 |          0 |         14 |        396 |
+| lib/impl/ui/lessons/impl/ui                                                                                    |          2 |        207 |          0 |         11 |        218 |
+| lib/impl/ui/log                                                                                                |          4 |        865 |          2 |         45 |        912 |
+| lib/impl/ui/log (Files)                                                                                        |          1 |         66 |          1 |          5 |         72 |
+| lib/impl/ui/log/impl                                                                                           |          3 |        799 |          1 |         40 |        840 |
+| lib/impl/ui/root                                                                                               |          2 |        133 |         14 |         13 |        160 |
+| lib/impl/ui/user                                                                                               |          1 |        171 |          0 |          4 |        175 |
+| lib/util                                                                                                       |          6 |        202 |         39 |         38 |        279 |
+| linux                                                                                                          |          5 |        110 |         33 |         44 |        187 |
+| linux (Files)                                                                                                  |          3 |         94 |         24 |         33 |        151 |
+| linux/flutter                                                                                                  |          2 |         16 |          9 |         11 |         36 |
+| macos                                                                                                          |          6 |        454 |          5 |         16 |        475 |
+| macos/Flutter                                                                                                  |          1 |         16 |          3 |          4 |         23 |
+| macos/Runner                                                                                                   |          4 |        431 |          0 |          8 |        439 |
+| macos/Runner (Files)                                                                                           |          2 |         20 |          0 |          6 |         26 |
+| macos/Runner/Assets.xcassets                                                                                   |          1 |         68 |          0 |          1 |         69 |
+| macos/Runner/Assets.xcassets/AppIcon.appiconset                                                                |          1 |         68 |          0 |          1 |         69 |
+| macos/Runner/Base.lproj                                                                                        |          1 |        343 |          0 |          1 |        344 |
+| macos/RunnerTests                                                                                              |          1 |          7 |          2 |          4 |         13 |
+| web                                                                                                            |          2 |         54 |         15 |          6 |         75 |
+| windows                                                                                                        |         10 |        451 |         94 |        143 |        688 |
+| windows/flutter                                                                                                |          2 |         23 |          9 |         11 |         43 |
+| windows/runner                                                                                                 |          8 |        428 |         85 |        132 |        645 |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                       | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Volumes/Productivity/Programming/Flutter/walley/README.md                                                     | Markdown   |         10 |          0 |          7 |         17 |
+| /Volumes/Productivity/Programming/Flutter/walley/analysis_options.yaml                                         | YAML       |          4 |         22 |          4 |         30 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/app/build.gradle                                      | Groovy     |         45 |          8 |          9 |         62 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/app/google-services.json                              | JSON       |         29 |          0 |          0 |         29 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/app/src/debug/AndroidManifest.xml                     | XML        |          3 |          4 |          1 |          8 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/app/src/main/AndroidManifest.xml                      | XML        |         34 |         11 |          1 |         46 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/app/src/main/res/drawable-v21/launch_background.xml   | XML        |          4 |          7 |          2 |         13 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/app/src/main/res/drawable/launch_background.xml       | XML        |          4 |          7 |          2 |         13 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/app/src/main/res/values-night/styles.xml              | XML        |          9 |          9 |          1 |         19 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/app/src/main/res/values/styles.xml                    | XML        |          9 |          9 |          1 |         19 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/app/src/profile/AndroidManifest.xml                   | XML        |          3 |          4 |          1 |          8 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/build.gradle                                          | Groovy     |         16 |          0 |          3 |         19 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/gradle.properties                                     | Properties |          3 |          0 |          1 |          4 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/gradle/wrapper/gradle-wrapper.properties              | Properties |          5 |          0 |          1 |          6 |
+| /Volumes/Productivity/Programming/Flutter/walley/android/settings.gradle                                       | Groovy     |         22 |          2 |          5 |         29 |
+| /Volumes/Productivity/Programming/Flutter/walley/assets/lesson_red_button.svg                                  | XML        |          1 |          0 |          0 |          1 |
+| /Volumes/Productivity/Programming/Flutter/walley/assets/lesson_white_button.svg                                | XML        |          1 |          0 |          0 |          1 |
+| /Volumes/Productivity/Programming/Flutter/walley/assets/text_logo.svg                                          | XML        |          1 |          0 |          0 |          1 |
+| /Volumes/Productivity/Programming/Flutter/walley/assets/transparent_logo.svg                                   | XML        |          1 |          0 |          0 |          1 |
+| /Volumes/Productivity/Programming/Flutter/walley/firebase.json                                                 | JSON       |          1 |          0 |          0 |          1 |
+| /Volumes/Productivity/Programming/Flutter/walley/ios/Runner/AppDelegate.swift                                  | Swift      |         12 |          0 |          2 |         14 |
+| /Volumes/Productivity/Programming/Flutter/walley/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json   | JSON       |        122 |          0 |          1 |        123 |
+| /Volumes/Productivity/Programming/Flutter/walley/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json | JSON       |         23 |          0 |          1 |         24 |
+| /Volumes/Productivity/Programming/Flutter/walley/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md     | Markdown   |          3 |          0 |          2 |          5 |
+| /Volumes/Productivity/Programming/Flutter/walley/ios/Runner/Base.lproj/LaunchScreen.storyboard                 | XML        |         36 |          1 |          1 |         38 |
+| /Volumes/Productivity/Programming/Flutter/walley/ios/Runner/Base.lproj/Main.storyboard                         | XML        |         25 |          1 |          1 |         27 |
+| /Volumes/Productivity/Programming/Flutter/walley/ios/Runner/Runner-Bridging-Header.h                           | C++        |          1 |          0 |          1 |          2 |
+| /Volumes/Productivity/Programming/Flutter/walley/ios/RunnerTests/RunnerTests.swift                             | Swift      |          7 |          2 |          4 |         13 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/firebase_options.dart                                     | Dart       |         53 |         12 |          4 |         69 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/gobal.dart                                                | Dart       |          4 |          0 |          2 |          6 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/auth/login_screen.dart                               | Dart       |        281 |          2 |         14 |        297 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/auth/register_screen.dart                            | Dart       |        241 |          0 |         10 |        251 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/finance/spending_category.dart                       | Dart       |         33 |          0 |          3 |         36 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/finance/spending_category_selector_item.dart         | Dart       |         31 |          0 |          3 |         34 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/abstract_walley_page.dart                         | Dart       |          3 |          0 |          1 |          4 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/home/home_page.dart                               | Dart       |        262 |         41 |          5 |        308 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/home/impl/balance_widget.dart                     | Dart       |        120 |          1 |          7 |        128 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/lessons/impl/lesson.dart                          | Dart       |          6 |          0 |          1 |          7 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/lessons/impl/lessons/unit1_lesson1.dart           | Dart       |        236 |          0 |          7 |        243 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/lessons/impl/lessons/unit1_lesson2.dart           | Dart       |        146 |          0 |          7 |        153 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/lessons/impl/ui/lesson_button.dart                | Dart       |         93 |          0 |          7 |        100 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/lessons/impl/ui/lesson_sliverappbar.dart          | Dart       |        114 |          0 |          4 |        118 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/lessons/lessons_page.dart                         | Dart       |        109 |          0 |          7 |        116 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/log/impl/deposit_tab.dart                         | Dart       |        285 |          0 |         13 |        298 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/log/impl/expend_tab.dart                          | Dart       |        289 |          0 |         13 |        302 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/log/impl/log_animation.dart                       | Dart       |        225 |          1 |         14 |        240 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/log/log_page.dart                                 | Dart       |         66 |          1 |          5 |         72 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/root/walley_app_bar.dart                          | Dart       |         87 |         13 |          5 |        105 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/root/walley_navigation_bar.dart                   | Dart       |         46 |          1 |          8 |         55 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/impl/ui/user/user_page.dart                               | Dart       |        171 |          0 |          4 |        175 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/main.dart                                                 | Dart       |         39 |          0 |          6 |         45 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/root_page.dart                                            | Dart       |         32 |          0 |          6 |         38 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/util/color_util.dart                                      | Dart       |          6 |          0 |          2 |          8 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/util/finance_util.dart                                    | Dart       |          4 |          0 |          2 |          6 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/util/firestore_extension.dart                             | Dart       |         58 |         20 |          8 |         86 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/util/navigation_util.dart                                 | Dart       |         16 |          4 |          4 |         24 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/util/time_util.dart                                       | Dart       |          5 |          0 |          2 |          7 |
+| /Volumes/Productivity/Programming/Flutter/walley/lib/util/user_util.dart                                       | Dart       |        113 |         15 |         20 |        148 |
+| /Volumes/Productivity/Programming/Flutter/walley/linux/flutter/generated_plugin_registrant.cc                  | C++        |         11 |          4 |          5 |         20 |
+| /Volumes/Productivity/Programming/Flutter/walley/linux/flutter/generated_plugin_registrant.h                   | C++        |          5 |          5 |          6 |         16 |
+| /Volumes/Productivity/Programming/Flutter/walley/linux/main.cc                                                 | C++        |          5 |          0 |          2 |          7 |
+| /Volumes/Productivity/Programming/Flutter/walley/linux/my_application.cc                                       | C++        |         82 |         17 |         26 |        125 |
+| /Volumes/Productivity/Programming/Flutter/walley/linux/my_application.h                                        | C++        |          7 |          7 |          5 |         19 |
+| /Volumes/Productivity/Programming/Flutter/walley/macos/Flutter/GeneratedPluginRegistrant.swift                 | Swift      |         16 |          3 |          4 |         23 |
+| /Volumes/Productivity/Programming/Flutter/walley/macos/Runner/AppDelegate.swift                                | Swift      |          8 |          0 |          2 |         10 |
+| /Volumes/Productivity/Programming/Flutter/walley/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json | JSON       |         68 |          0 |          1 |         69 |
+| /Volumes/Productivity/Programming/Flutter/walley/macos/Runner/Base.lproj/MainMenu.xib                          | XML        |        343 |          0 |          1 |        344 |
+| /Volumes/Productivity/Programming/Flutter/walley/macos/Runner/MainFlutterWindow.swift                          | Swift      |         12 |          0 |          4 |         16 |
+| /Volumes/Productivity/Programming/Flutter/walley/macos/RunnerTests/RunnerTests.swift                           | Swift      |          7 |          2 |          4 |         13 |
+| /Volumes/Productivity/Programming/Flutter/walley/pubspec.yaml                                                  | YAML       |         75 |         59 |         18 |        152 |
+| /Volumes/Productivity/Programming/Flutter/walley/web/index.html                                                | HTML       |         19 |         15 |          5 |         39 |
+| /Volumes/Productivity/Programming/Flutter/walley/web/manifest.json                                             | JSON       |         35 |          0 |          1 |         36 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/flutter/generated_plugin_registrant.cc                | C++        |         18 |          4 |          5 |         27 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/flutter/generated_plugin_registrant.h                 | C++        |          5 |          5 |          6 |         16 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/runner/flutter_window.cpp                             | C++        |         49 |          7 |         16 |         72 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/runner/flutter_window.h                               | C++        |         20 |          5 |          9 |         34 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/runner/main.cpp                                       | C++        |         30 |          4 |         10 |         44 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/runner/resource.h                                     | C++        |          9 |          6 |          2 |         17 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/runner/utils.cpp                                      | C++        |         54 |          2 |         10 |         66 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/runner/utils.h                                        | C++        |          8 |          6 |          6 |         20 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/runner/win32_window.cpp                               | C++        |        210 |         24 |         55 |        289 |
+| /Volumes/Productivity/Programming/Flutter/walley/windows/runner/win32_window.h                                 | C++        |         48 |         31 |         24 |        103 |
+| Total                                                                                                          |            |      4,752 |        404 |        473 |      5,629 |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
